@@ -23,6 +23,16 @@ if max_val > threshold:
 
     cv.rectangle(main_img, top_left, buttom_right, color=(200,30,41), thickness=2, lineType=cv.LINE_4)
     
+    font = cv.FONT_ITALIC
+
+    position = (top_left[0]+5, top_left[1]-10)
+
+    font_size = 0.5
+
+    color = (200,30,41)
+    cv.putText(main_img, "Ramos", position, font, font_size, color=color, thickness=2)
+
+
     cv.imshow('result', main_img)
 
     cv.waitKey()
